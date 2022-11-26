@@ -1,0 +1,8 @@
+
+------Duplicate_Email--------
+with cte as (select email,count(email)
+from person
+group by email
+having count(email)>1) 
+
+select email from cte
